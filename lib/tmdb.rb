@@ -7,7 +7,9 @@ require 'nibbler/json'
 module Tmdb
   # http://api.themoviedb.org/2.1/methods/Movie.search
   def self.search term
-    json_string = Net::HTTP.get(URI.parse("http://api.themoviedb.org/2.1/Movie.search/en/json/#{$settings.tmdb.api_key}/#{CGI.escape term}"))
+    uri = URI.parse("http://api.themoviedb.org/2.1/Movie.search/en/json/#{$settings.tmdb.api_key}/#{CGI.escape term}")
+    json_string = Net::HTTP.get(uri)
+    parse json_string
   end
   
   def self.parse json_string
@@ -22,7 +24,9 @@ module Tmdb
     element :imdb_id
     element :url
     element 'overview' => :synopsis
-    element 'released' => :year, :with => lambda { |date| Date.parse(date).year }
+    element 'released' => :year, :with => lambda { |date|
+      Date.parse(date).year unless date.blank?
+    }
   end
   
   class Result < NibblerJSON
