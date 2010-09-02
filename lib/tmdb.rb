@@ -3,6 +3,8 @@ require 'cgi'
 require 'uri'
 require 'yajl/json_gem'
 require 'nibbler/json'
+require 'active_support/all'
+require 'logger'
 
 module Tmdb
   # http://api.themoviedb.org/2.1/methods/Movie.search
@@ -27,6 +29,14 @@ module Tmdb
     element 'released' => :year, :with => lambda { |date|
       Date.parse(date).year unless date.blank?
     }
+    element 'posters' => :poster_cover, :with => lambda { |posters|
+      poster = posters.find { |p| p["image"]["size"] == "cover" }
+      poster.nil? ? '' : poster["image"]["url"]
+    }
+    element 'posters' => :poster_thumb, :with => lambda { |posters|
+      poster = posters.find { |p| p["image"]["size"] == "thumb" }
+      poster.nil? ? '' : poster["image"]["url"]
+    }    
   end
   
   class Result < NibblerJSON
@@ -52,6 +62,9 @@ if $0 == __FILE__
     its(:url)               { should == 'http://www.themoviedb.org/movie/1075' }
     its(:synopsis)          { should include('Matko is a small time hustler') }
     its(:year)              { should == 1998 }
+    its(:poster_cover) {
+      should == 'http://hwcdn.themoviedb.org/posters/64f/4bf41d18017a3c320a00064f/crna-macka-beli-macor-cover.jpg'
+    }
     
   end
 end
