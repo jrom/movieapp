@@ -1,0 +1,41 @@
+* { margin:0; padding:0 }
+ol, ul { list-style:none }
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section { display:block }
+
+body {
+  font: 75%/1.5em geneva,"bitstream vera sans",arial,helvetica,sans-serif;
+  padding:2.5em 4em;
+  background-color:#FDFDFD; color:#222;
+}
+  
+h1 { font-weight:normal }
+  h1 a { text-decoration:none }
+
+header h1 {
+  font:bold 5em "josefin sans std",geneva,"bitstream vera sans",arial,helvetica,sans-serif;
+  letter-spacing:1px;
+  text-shadow:1px 1px 1px rgba(127, 127, 127, 0.5);
+}
+header nav { margin:-1.4em 0 1.5em 1.2em }
+
+a:link, a:visited { color:inherit }
+a:hover, a:active { /*color: lemonchiffon;*/ }
+
+.actions li { display:inline; border-left:1px solid; padding-left:.8em; margin-left:.5em; }
+.actions li:first-child, ol.movies .actions li { border-left:0 none; padding-left:0; margin-left:0; }
+
+/* movie list */
+
+ol.movies {
+  counter-reset: item; padding-left: 0;
+}
+  ol.movies > li {
+    margin-top:1em;
+  }
+  ol.movies dl { }
+    ol.movies dt { font:2.5em "josefin sans std",geneva,arial,sans-serif }
+    ol.movies dl a { font-weight:bold; text-decoration:none }
+  ol.movies .actions { }
+    ol.movies .actions li { }
+      ol.movies .actions a { text-decoration:none; display:block }
+      ol.movies .actions a:hover { background:#E49D52 }
