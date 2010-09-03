@@ -6,6 +6,7 @@ body {
   font: 75%/1.5em geneva,"bitstream vera sans",arial,helvetica,sans-serif;
   padding:2.5em 4em;
   background-color:#FDFDFD; color:#222;
+  background-image:url('/images/9_2_grid.png');
 }
   
 h1 { font-weight:normal }
