@@ -23,6 +23,13 @@
         <% end %>
       </nav>
     
+      <%= form_tag root_path, :method => 'get' do %>
+        <div>
+          <%= label_tag :q, 'Search a movie:' %>
+          <%= text_field_tag :q, @query, :type => 'search' %>
+        </div>
+      <% end %>
+    
     </header>
     
     <%= yield %>

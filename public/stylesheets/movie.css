@@ -18,6 +18,11 @@ header h1 {
   text-shadow:1px 1px 1px rgba(127, 127, 127, 0.5);
 }
 header nav { margin:-1.4em 0 1.5em 1.2em }
+header form {
+  position:relative; left:38em; top:-6.5em;
+  width:20em;
+}
+  header form label { display:block }
 
 a:link, a:visited { color:inherit }
 a:hover, a:active { /*color: lemonchiffon;*/ }
