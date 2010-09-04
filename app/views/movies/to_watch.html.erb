@@ -3,15 +3,14 @@
 <ol class="movies">
 <% for movie in @movies %>
   <li>
-    <dl>
-      <dt><%= link_to(title_for_movie(movie), movie) %> <span>(<%= movie.year %>)</span></dt>
-      <dd><img src="<%= movie.poster_small_url %>" alt="<%= movie.title %> cover" /></dd>
-    </dl>
+
+    <%= render :partial => 'movie', :locals => { :movie => movie } %>
         
     <ol class="actions">
       <li><a href="#" title="Hey, I watched this!">✓</a></li>
       <li><%= link_to '+', add_to_watch_path(:id => movie.id), :title => "To watch..." %></li>
     </ol>
+
   </li>
 <% end %>
 </ol>

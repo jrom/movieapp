@@ -1,0 +1,3 @@
+<img src="<%= movie.poster_small_url %>" alt="<%= movie.poster_small_url.empty? ? 'No' : movie.title %> cover" />
+<%= link_to(title_for_movie(movie), movie) %>
+<time>(<%= movie.year %>)</time>

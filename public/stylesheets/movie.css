@@ -9,7 +9,7 @@ body {
 /*  background-image:url('/images/9_2_grid.png');*/
 }
   
-h1 { font-weight:normal }
+h1 { font-weight:normal; text-shadow:1px 1px 1px rgba(127, 127, 127, 0.5) }
   h1 a { text-decoration:none }
 
 header { width:38em; float:left }
@@ -31,7 +31,7 @@ header { width:38em; float:left }
 
 body > section { margin-left:1.2em }
   body > section > h1 {
-    margin:-0.2em 0 2em;
+    margin:3.3em 0 1.75em;
     font-size:1.5em;
   }
 
@@ -43,15 +43,25 @@ a:hover, a:active { /*color: lemonchiffon;*/ }
 
 /* movie list */
 
-ol.movies {
-  counter-reset: item; padding-left: 0;
-}
-  ol.movies > li {
-    margin-top:1em;
+ol.movies > li { margin-bottom:2em; clear:left; overflow:hidden } 
+  ol.movies > li > a, ol.movies time {
+    font-family:"josefin sans std",geneva,arial,sans-serif;
+    text-shadow:1px 1px 1px rgba(0, 0, 0, 0.3);
   }
-  ol.movies dl { }
-    ol.movies dt { font:2.5em "josefin sans std",geneva,arial,sans-serif }
-    ol.movies dl a { font-weight:bold; text-decoration:none }
+  ol.movies > li > a {
+    font-size:2.1em; line-height:1.1em;
+    text-decoration:none;
+  }
+  ol.movies time {
+    font-size:1.3em; line-height:1.2em;
+    display:block;
+  }
+  ol.movies img {
+    border:1px solid #777777;
+    display:block; width:92px; min-height:120px;
+    float:left; margin-right:2em;
+  }
+
   ol.movies .actions { }
     ol.movies .actions li { }
       ol.movies .actions a { text-decoration:none; display:block }
