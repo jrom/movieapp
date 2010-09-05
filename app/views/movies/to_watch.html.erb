@@ -7,8 +7,8 @@
     <%= render :partial => 'movie', :locals => { :movie => movie } %>
         
     <ol class="actions">
-      <li><a href="#" title="Hey, I watched this!">✓</a></li>
-      <li><%= link_to '+', add_to_watch_path(:id => movie.id), :title => "To watch..." %></li>
+      <li><a href="#"><span>✓</span>Watched it!</a></li>
+      <li><a href="#"><span class="toothin">-</span>Remove</a></li>
     </ol>
 
   </li>
