@@ -44,7 +44,7 @@ a:hover, a:active { /*color: lemonchiffon;*/ }
 /* movie list */
 
 ol.movies > li { margin-bottom:2em; clear:left; overflow:hidden } 
-  ol.movies > li > a, ol.movies time {
+  ol.movies > li > a, ol.movies > li > span {
     font-family:"josefin sans std",geneva,arial,sans-serif;
     text-shadow:1px 1px 1px rgba(0, 0, 0, 0.3);
   }
@@ -52,8 +52,8 @@ ol.movies > li { margin-bottom:2em; clear:left; overflow:hidden }
     font-size:2.1em; line-height:1.1em;
     text-decoration:none;
   }
-  ol.movies time {
-    font-size:1.3em; line-height:1.2em;
+  ol.movies > li > span {
+    font-size:1.3em; line-height:1.5em;
     display:block;
   }
   ol.movies img {
