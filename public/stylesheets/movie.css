@@ -29,8 +29,8 @@ header { width:38em; float:left }
       font-size:11px;
    }
 
-body > section { margin-left:1.2em }
-  body > section > h1 {
+body > article { margin-left:1.2em }
+  body > article > h1 {
     margin:3.3em 0 1.75em;
     font-size:1.5em;
   }
