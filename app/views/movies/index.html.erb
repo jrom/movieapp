@@ -6,15 +6,20 @@
 
 <ol class="movies" style="counter-reset: item <%#= @movies.offset %>">
 <% for movie in @movies %>
-  <li>
 
-    <%= render :partial => 'movie', :locals => { :movie => movie } %>
+  <li>
+    <article>
+
+      <%= render :partial => 'movie', :locals => { :movie => movie } %>
         
-    <ol class="actions">
-      <li><a href="#"><span>✓</span>Watched it!</a></li>
-      <li><a href="<%= add_to_watch_path(:id => movie.id) %>"><span class="toothin">+</span>Movie to see</a></li>
-    </ol>
+      <ol class="actions">
+        <li><a href="#"><span>✓</span>Watched it!</a></li>
+        <li><a href="<%= add_to_watch_path(:id => movie.id) %>"><span class="toothin">+</span>Movie to see</a></li>
+      </ol>
+
+    </article>    
   </li>
+
 <% end %>
 </ol>
 
