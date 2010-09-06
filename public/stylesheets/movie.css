@@ -1,3 +1,5 @@
+@font-face { font-family:"josefin sans std"; src:url("/fonts/JosefinSansStd-Light.otf") }
+
 * { margin:0; padding:0 }
 ol, ul { list-style:none }
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section { display:block }
