@@ -3,5 +3,5 @@
 
   <h1><%= title_for_movie(movie) %></h1>
 
-  <span>(<% if movie.year? %><time><%= movie.year %></time><% else %>no year<% end %>)</span>
+  <%= movie_year(movie) %>
 </a>
